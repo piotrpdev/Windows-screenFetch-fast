@@ -16,7 +16,7 @@ The original is really slow (at least as of me writing this) and hasn't been upd
 
 Windows screenFetch is available and managed through [Powershell Gallery](https://www.powershellgallery.com/packages/windows-screenfetch).
 
-```ps
+```pwsh
 Install-Module -Name windows-screenfetch-fast
 ```
 
