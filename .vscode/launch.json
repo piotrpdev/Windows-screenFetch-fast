@@ -2,44 +2,50 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "PowerShell",
+            "name": "Open powershell and import",
+            "type": "clr",
             "request": "launch",
-            "name": "PowerShell Launch Current File",
-            "script": "${file}",
-            "args": [],
-            "cwd": "${file}"
-        },
-        {
-            "type": "PowerShell",
-            "request": "launch",
-            "name": "PowerShell Launch Current File in Temporary Console",
-            "script": "${file}",
-            "args": [],
-            "cwd": "${file}",
-            "createTemporaryIntegratedConsole": true
-        },
-        {
-            "type": "PowerShell",
-            "request": "launch",
-            "name": "PowerShell Launch Current File w/Args Prompt",
-            "script": "${file}",
+            "program": "powershell",
             "args": [
-                "${command:SpecifyScriptArgs}"
+                "-NoExit",
+                "-NoProfile",
+                "-Command",
+                "Import-Module ${workspaceFolder}/windows-screenfetch-fast.psd1",
             ],
-            "cwd": "${file}"
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "integratedTerminal"
         },
         {
-            "type": "PowerShell",
-            "request": "attach",
-            "name": "PowerShell Attach to Host Process",
-            "processId": "${command:PickPSHostProcess}",
-            "runspaceId": 1
-        },
-        {
-            "type": "PowerShell",
+            "name": "Test speed",
+            "type": "clr",
             "request": "launch",
-            "name": "PowerShell Interactive Session",
-            "cwd": "${workspaceRoot}"
-        }
+            "program": "powershell",
+            "args": [
+                "-NoExit",
+                "-NoProfile",
+                "-Command",
+                "Import-Module ${workspaceFolder}/windows-screenfetch-fast.psd1; Import-Module ${workspaceFolder}/Data.psm1; .\\test\\functions_speed.ps1; Write-Host '\n'; Screenfetch",
+            ],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Test functions speed",
+            "type": "clr",
+            "request": "launch",
+            "program": "powershell",
+            "args": [
+                "-NoExit",
+                "-NoProfile",
+                "-Command",
+                "Import-Module ${workspaceFolder}/Data.psm1;",
+                ".\\test\\functions_speed.ps1;"
+            ],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "integratedTerminal"
+        },
     ]
 }

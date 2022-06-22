@@ -20,7 +20,7 @@ Function Get-WindowsArt()
             "                                        ",
             "                                        ",
             "                                        ";
-    
+
     return $ArtArray;
 }
 

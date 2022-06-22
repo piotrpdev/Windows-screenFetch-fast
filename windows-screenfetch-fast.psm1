@@ -1,7 +1,16 @@
-#### Screenfetch for powershell
-#### Author Julian Chow
+<#
+ .Synopsis
+  Windows-screenFetch but faster.
 
+ .Description
+  This is a fork of [Windows-screenFetch](https://github.com/JulianChow94/Windows-screenFetch) that aims to be faster.
 
+ .Parameter Distro
+  Cam be used to switch logo.
+
+ .Example
+   Screenfetch
+#>
 Function Screenfetch($distro)
 {
     $AsciiArt = "";
