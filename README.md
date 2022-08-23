@@ -2,6 +2,8 @@
 
 ![Example](./screenshots/ss.png)
 
+## Please use [this project](https://github.com/AkariiinMKII/Windows-screenFetch) instead, it is a fork that fixes many more of the issues present in the original and I highly recommend it!
+
 This is a fork of [Windows-screenFetch](https://github.com/JulianChow94/Windows-screenFetch) that aims to be faster.
 
 ## Why?
