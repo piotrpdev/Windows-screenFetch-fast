@@ -1,18 +1,18 @@
 $speeds = @{
-    "Get-SystemSpecifications" = (Measure-Command { Get-SystemSpecifications }).TotalSeconds
-    'Get-UserInformation' = (Measure-Command { Get-UserInformation }).TotalSeconds
-    'Get-OS'= (Measure-Command { Get-OS }).TotalSeconds
-    'Get-Kernel' = (Measure-Command { Get-Kernel }).TotalSeconds
-    'Get-Uptime' = (Measure-Command { Get-Uptime }).TotalSeconds
-    'Get-Mobo' = (Measure-Command { Get-Mobo }).TotalSeconds
-    'Get-Shell' = (Measure-Command { Get-Shell }).TotalSeconds
-    'Get-Displays' = (Measure-Command { Get-Displays }).TotalSeconds
-    'Get-WM' = (Measure-Command { Get-WM }).TotalSeconds
-    'Get-Font' = (Measure-Command { Get-Font }).TotalSeconds
-    'Get-CPU' = (Measure-Command { Get-CPU }).TotalSeconds
-    'Get-GPU' = (Measure-Command { Get-GPU }).TotalSeconds
-    'Get-RAM' = (Measure-Command { Get-RAM }).TotalSeconds
-    'Get-Disks' = (Measure-Command { Get-Disks }).TotalSeconds
+    "Get-SystemSpecifications" = (Measure-Command { Get-SystemSpecifications }).TotalMilliseconds
+    'Get-UserInformation' = (Measure-Command { Get-UserInformation }).TotalMilliseconds
+    'Get-OS'= (Measure-Command { Get-OS }).TotalMilliseconds
+    'Get-Kernel' = (Measure-Command { Get-Kernel }).TotalMilliseconds
+    'Get-Uptime' = (Measure-Command { Get-Uptime }).TotalMilliseconds
+    'Get-Mobo' = (Measure-Command { Get-Mobo }).TotalMilliseconds
+    'Get-Shell' = (Measure-Command { Get-Shell }).TotalMilliseconds
+    'Get-Displays' = (Measure-Command { Get-Displays }).TotalMilliseconds
+    'Get-WM' = (Measure-Command { Get-WM }).TotalMilliseconds
+    'Get-Font' = (Measure-Command { Get-Font }).TotalMilliseconds
+    'Get-CPU' = (Measure-Command { Get-CPU }).TotalMilliseconds
+    'Get-GPU' = (Measure-Command { Get-GPU }).TotalMilliseconds
+    'Get-RAM' = (Measure-Command { Get-RAM }).TotalMilliseconds
+    'Get-Disks' = (Measure-Command { Get-Disks }).TotalMilliseconds
 }
 
 $speeds.GetEnumerator() | Sort-Object -property:Value -Descending
